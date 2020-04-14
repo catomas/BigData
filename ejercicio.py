@@ -11,14 +11,14 @@ class salario(MRJob):
     else:
       yield sector, salary
       
-  def reducer (self, sececon, salarios):
+  def reducer (self, sector, salarios):
     sumaSalarios = 0
     cont = 0
     for sal in salarios:
-      sum_salaries = sum_salaries + sal
+      sumaSalarios = sumaSalarios + sal
       cont = cont +1
         
-    yield sececon, sum_salaries / cont
+    yield sector, sumaSalarios / cont
 
 if __name__ == '__main__':
   salario.run()
