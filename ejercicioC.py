@@ -5,7 +5,7 @@ class salario(MRJob):
   def mapper(self, _, line):
     idemp, sector, salary, year = line.split(',')
    
-    yield idemp, sector, 1
+    yield (idemp, (sector, 1))
     
       
   def reducer (self, idemp, sector):
