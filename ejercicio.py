@@ -15,7 +15,6 @@ class salario(MRJob):
   def reducer (self, sector, salary):
     sumaSalarios = 0
     cont = 0
-    print('Sector', 'Salario')
     for sal in salary:
       sumaSalarios = sumaSalarios + sal
       cont = cont +1   
