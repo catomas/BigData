@@ -14,10 +14,10 @@ class salario(MRJob):
   def reducer (self, sector, salary):
     sumaSalarios = 0
     cont = 0
+    yield 'Sector', 'Salarios'
     for sal in salary:
       sumaSalarios = sumaSalarios + sal
-      cont = cont +1
-    yield "Sector", "Salarios"    
+      cont = cont +1   
     yield sector, sumaSalarios / cont
 
 if __name__ == '__main__':
