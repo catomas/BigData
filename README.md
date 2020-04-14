@@ -1,4 +1,4 @@
-# Laboratorios de BigData
+# Laboratorio de BigData
 
 * Laboratorio S3
 * Laboratoria HDFS
